@@ -10,7 +10,7 @@ url_loc = {}
 for year in range(2020, 2021):
   year_path= '/dbfs/FileStore/taxi_csv/%s' % year
   os.makedirs(year_path,exist_ok= True)
-  for m in range(1, 3):
+  for m in range(1, 13):
     month = "{:02d}".format(m)
     fname = 'yellow_tripdata_%s-%s.csv' % (year, month)
     url = 'https://s3.amazonaws.com/nyc-tlc/trip+data/%s' % fname
